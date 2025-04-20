@@ -1,6 +1,6 @@
 import './App.scss'
 import { Outlet } from 'react-router-dom';
-import { Header } from './modules/header/Header';
+import { Header } from './modules/Header/Header';
 
 export const App = () => {
 
