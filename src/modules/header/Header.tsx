@@ -1,4 +1,4 @@
-import { NavMenu } from './components/NavMenu/NavMenu';
+import { NavMenu } from './components/NavMenu';
 import s from './Header.module.scss';
 
 export const Header = () => {
