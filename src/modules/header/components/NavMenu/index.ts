@@ -1,1 +1,1 @@
-import * from './NavMenu';
+export * from './NavMenu';
