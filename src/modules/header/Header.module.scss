@@ -1,0 +1,9 @@
+@use './../../styles/main' as *;
+
+.nav__wrapper {
+  height: 50px;
+
+  @include on-tablet {
+    height: 150px;
+  }
+}

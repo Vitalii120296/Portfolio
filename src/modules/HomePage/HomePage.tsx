@@ -1,7 +1,9 @@
-// import s from './HomePage.module.scss';
+import s from './HomePage.module.scss';
 
 export const HomePage = () => {
   return (
-    <h1>HomePage</h1>
+    <div className="container">
+      <h1 className={s.h1}>HomePage</h1>
+    </div>
   );
 };

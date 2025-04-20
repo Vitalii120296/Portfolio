@@ -1,17 +1,20 @@
-import { NavLink } from 'react-router-dom';
-import s from './NavMenu.module.scss';
 import { useContext } from 'react';
+import s from './BurgerMenu.module.scss';
 import { BurgerContext } from '../../../../shared/context/BurgerContext';
 import classNames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
-
-export const NavMenu = () => {
+export const BurgerMenu = () => {
   const { burgerMenuActivate, setBurgerMenuActivate } = useContext(BurgerContext);
 
-  const toggleBurgerMenu = () => setBurgerMenuActivate(prev => !prev)
   return (
-    <div className={s.nav__wrapper}>
+    <div className={classNames(s.burger, {
+      [s.active]: burgerMenuActivate,
+    })}>
       <nav className={s.nav}>
+        <div className={s.nav__close} onClick={() => setBurgerMenuActivate(prev => !prev)}>
+          <img src="img/icons/close.png" alt="close menu" />
+        </div>
         <ul className={s.nav__list}>
           <li className={s.nav__item}>
             <NavLink to="/" className={s.nav__link}>
@@ -35,14 +38,6 @@ export const NavMenu = () => {
           </li>
         </ul>
       </nav>
-      <div
-      className={classNames(s.nav__burger_icon, {
-        [s.isActive]: burgerMenuActivate,
-      })}
-      onClick={toggleBurgerMenu}
-      >
-        <img src="img/icons/burgerMenu.png" alt="menu" />
-      </div>
     </div>
   );
 };

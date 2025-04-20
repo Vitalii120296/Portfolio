@@ -1,12 +1,20 @@
 @use './../../../../styles/main' as *;
 
 .nav {
-  width: auto;
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+  }
 
   &__wrapper {
     display: flex;
-    justify-content: center;
-    padding: 25px;
+    justify-content: end;
+    height: 100%;
+
+    @include on-tablet {
+      justify-content: center;
+    }
   }
 
   &__list {
@@ -15,7 +23,7 @@
     align-items: center;
     height: 100%;
     list-style: none;
-    column-gap: 12px;
+    column-gap: 2rem;
   }
 
   &__item {
@@ -31,8 +39,31 @@
 
   &__link {
     display: flex;
-    padding: 10px 15px;
-    font-size: 14px;
+    text-wrap: nowrap;
+    padding: 13px 25px;
+    font-size: 13px;
     letter-spacing: 1.5px;
+    height: 100%;
+  }
+
+  &__burger_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    transition: transform 0.3s;
+
+    & img {
+      height: 13px;
+      width: 15px;
+    }
+    @include on-tablet {
+      display: none;
+    }
+
+    &.isActive {
+      display: flex;
+      transform: rotate(180deg);
+    }
   }
 }
