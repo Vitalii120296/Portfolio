@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "types": ["node", "react"]
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
