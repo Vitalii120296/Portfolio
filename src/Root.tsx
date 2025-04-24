@@ -9,6 +9,9 @@ export const Root = () => (
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
+          <Route path="projects" element={<HomePage />} />
+          <Route path="about-me" element={<HomePage />} />
+          <Route path="contact" element={<HomePage />} />
         </Route>
       </Routes>
     </Router>

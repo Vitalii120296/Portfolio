@@ -1,11 +1,9 @@
 @use './../../styles/main' as *;
 
-.home_page {
-  
+.projects {
   @extend %page-style;
 
   &__title {
     @extend %page-style-title;
-  }
+  } 
 }
-

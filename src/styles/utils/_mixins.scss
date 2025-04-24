@@ -30,6 +30,8 @@
 
 .container {
   padding-inline: 16px;
+  box-sizing: border-box;
+
 
   @include on-tablet {
     padding-inline: 24px;

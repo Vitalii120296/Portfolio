@@ -1,0 +1,29 @@
+@use './../../styles/main' as *;
+
+.photo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 2rem;
+
+  @include on-tablet {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include on-desktop {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+
+    @include hover (scale, 1.1)
+  }
+}
