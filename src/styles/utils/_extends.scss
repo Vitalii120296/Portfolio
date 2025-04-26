@@ -1,3 +1,5 @@
+@use './vars' as *;
+
 %page-style {
   display: flex;
   font-size: 16px;
@@ -7,7 +9,6 @@
   line-height: 140%;
   border-radius: 1rem;
   padding: 15px;
-  row-gap: 25px;
   box-sizing: border-box;
   animation: shadow-color-change 7s linear infinite;
 }
@@ -24,6 +25,11 @@
       right: 0;
       left: 0;
       content: "";
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $text;
+      box-shadow: 0 0 10px $text,
+      0 0 15px $text,
+      0 0 20px $text,
+      0 0 30px $text;
+      box-sizing: border-box;
     }
 }

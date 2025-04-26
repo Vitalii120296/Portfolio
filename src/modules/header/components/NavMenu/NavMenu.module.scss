@@ -16,7 +16,9 @@
   &__wrapper {
     display: flex;
     justify-content: end;
+
     height: 100%;
+
 
     @include on-tablet {
       justify-content: center;
@@ -29,22 +31,17 @@
     align-items: center;
     height: 100%;
     list-style: none;
-    column-gap: 2rem;
+    column-gap: 1.2rem;
+
+    @include on-desktop {
+      column-gap: 2rem;
+
+    }
   }
 
   &__item {
-    box-shadow: 0 0 10px $shadow, inset 0 0 25px $shadow;
-    border-radius: 1rem;
-    transition: all 0.5s;
-    height: 50px;
     display: flex;
     align-items: center;
-
-    &:hover {
-      box-shadow: 0 0 10px $shadow-2, inset 0 0 5px $shadow-2;
-      transform: scale(1.1);
-    }
-
   }
 
   &__icons {
@@ -57,9 +54,24 @@
     align-items: center;
     column-gap: 10px;
     text-wrap: nowrap;
-    padding: 13px 25px;
+    padding: 3px 12px;
     font-size: 13px;
     letter-spacing: 1.5px;
+    height: 40px;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px $shadow, inset 0 0 25px $shadow;
+    transition: all 0.5s;
+
+    &:hover,
+    &.isActive {
+      box-shadow: 0 0 10px $shadow-2, inset 0 0 5px $shadow-2;
+      transform: scale(1.1);
+    }
+
+    @include on-desktop {
+      padding: 0 20px;
+    }
+
   }
 
   &__burger_icon {
@@ -73,6 +85,7 @@
       height: 13px;
       width: 15px;
     }
+
     @include on-tablet {
       display: none;
     }

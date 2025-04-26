@@ -17,7 +17,8 @@
   }
 
   &__wrapper {
-    height: 100%;
+    height: auto;
+    z-index: 2;
   }
 
   & img {

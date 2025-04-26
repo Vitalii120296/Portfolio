@@ -2,9 +2,77 @@
 
 .about {
   @extend %page-style;
+  row-gap: 12px;
+
+  & li {
+    list-style: circle;
+  }
 
   &__title {
     @extend %page-style-title;
 
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  &__list_title {
+    letter-spacing: 2px;
+    padding: 0 0 0 10px;
+  }
+
+  &__skills {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    row-gap: 12px;
+
+    &_image {
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      transition: scale 0.3s;
+
+      &:hover {
+        scale: 1.2;
+      }
+
+      &_reactrouter,
+      &_tailwindcss,
+      &_webpack,
+      &_github {
+        filter: brightness(1) invert(1);
+      }
+
+      &_react {
+        aspect-ratio: 1 / 1;
+        animation: react 4s linear infinite;
+      }
+    }
+
+    & img {
+      height: 45px;
+      width: inherit;
+      object-position: center;
+      object-fit: contain;
+
+    }
+
+  }
+}
+
+@keyframes react {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
   }
 }

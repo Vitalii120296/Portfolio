@@ -2,10 +2,29 @@
 
 .home_page {
   
+  & a {
+    text-decoration: underline;
+  }
+
   @extend %page-style;
+  row-gap: 12px;
+
+  & li {
+    list-style: circle;
+  }
 
   &__title {
     @extend %page-style-title;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  &__picture {
+    width: 100%;
   }
 }
 

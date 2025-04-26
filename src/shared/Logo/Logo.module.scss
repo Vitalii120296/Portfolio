@@ -1,0 +1,14 @@
+@use './../../styles/main' as *;
+
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 25px;
+  height: 100%;
+  width: 100%;
+  color: $background;
+  text-shadow: 0 0 10px $text,
+  0 0 20px $text,
+  0 0 10px $text;
+}
