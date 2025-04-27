@@ -10,4 +10,12 @@
   right: 0;
   height: 25px;
   background-color: rgba($color: $background, $alpha: 0.5);
+
+  @include on-tablet {
+    height: 50px;
+  }
+
+  @include on-desktop {
+    height: 75px;
+  }
 }

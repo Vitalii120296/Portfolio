@@ -5,7 +5,9 @@ export const Contact = () => {
 
   return (
     <div className={s.contact}>
-      <div className={s.contact__title}>Connect with me:</div>
+      <div className={s.contact__title}>
+        <h1>Connect with me:</h1>
+      </div>
       <div className={s.contact__wrapper}>
         <div className={s.contacts}>
           <div className={s.contacts__links}>

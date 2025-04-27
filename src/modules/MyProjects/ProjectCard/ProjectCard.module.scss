@@ -1,0 +1,39 @@
+@use './../../../styles/main' as *;
+
+.card {
+  width: 100%;
+  min-width: 212px;
+  height: auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border: 1px solid $shadow;
+  box-shadow: inset 0 0 5px $shadow-2;
+  border-radius: inherit;
+  font-size: 14px;
+  transition: scale 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.04;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    display: flex;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  &__description {
+    display: flex;
+  }
+}

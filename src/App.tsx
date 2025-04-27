@@ -14,42 +14,52 @@ export const App = () => {
   const [rotate, setRotate] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
   const [contentHeight, setContentHeight] = useState(0);
+
   const cubeRef = useRef<HTMLDivElement | null>(null);
   const homePageRef = useRef<HTMLDivElement | null>(null);
   const contactPageRef = useRef<HTMLDivElement | null>(null);
   const aboutPageRef = useRef<HTMLDivElement | null>(null);
   const projectsPageRef = useRef<HTMLDivElement | null>(null);
+  const mainRef = useRef<HTMLDivElement | null>(null);
+
+  const observerRef = useRef<ResizeObserver | null>(null);
+  const activePageRef = useRef<HTMLDivElement | null>(null);
 
   const updateHeight = () => {
-    let activePageRef: typeof homePageRef | null = null;
-
-    switch (location.pathname) {
-      case '/':
-        activePageRef = homePageRef;
-        break;
-      case '/projects':
-        activePageRef = projectsPageRef;
-        break;
-      case '/about-me':
-        activePageRef = aboutPageRef;
-        break;
-      case '/contact':
-        activePageRef = contactPageRef;
-        break;
-      default:
-        activePageRef = homePageRef;
-    }
-
-    if (activePageRef?.current) {
+    if (activePageRef.current) {
       setContentHeight(activePageRef.current.offsetHeight);
     }
   };
 
   useEffect(() => {
+    if (!observerRef.current) {
+      observerRef.current = new ResizeObserver(() => {
+        updateHeight();
+      });
+    }
+
+    const pageMap: Record<string, React.RefObject<HTMLDivElement | null>> = {
+      '/': homePageRef,
+      '/projects': projectsPageRef,
+      '/about-me': aboutPageRef,
+      '/contact': contactPageRef,
+    };
+
+    const newPageRef = pageMap[location.pathname] || homePageRef;
+
+    if (activePageRef.current && observerRef.current) {
+      observerRef.current.unobserve(activePageRef.current);
+    }
+
+    activePageRef.current = newPageRef.current;
+
+    if (activePageRef.current && observerRef.current) {
+      observerRef.current.observe(activePageRef.current);
+    }
+
     if (cubeRef.current) {
       setContentWidth(cubeRef.current.offsetWidth);
     }
-    updateHeight();
 
     switch (location.pathname) {
       case '/':
@@ -69,24 +79,26 @@ export const App = () => {
         break;
     }
 
-  }, [location.pathname])
-
-  useEffect(() => {
-    const handleResize = () => updateHeight();
-
-    window.addEventListener('resize', handleResize);
+    updateHeight();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
-  }, []);
+
+  }, [location.pathname]);
 
   return (
     <div className="app" id="top">
       <header>
         <Header />
       </header>
-      <main className="container" style={{ height: `${contentHeight + 84}px`}}>
+      <main
+        ref={mainRef}
+        className="container"
+        style={{ height: `${contentHeight + 150}px` }}
+      >
         <Photo />
         <div className="container_3d">
           <div

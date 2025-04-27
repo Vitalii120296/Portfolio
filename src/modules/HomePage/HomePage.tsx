@@ -22,7 +22,7 @@ export const HomePage = () => {
         <ul>
           <li><Link to="/projects">Мої проєкти:</Link> приклади реальних задач, які я вирішував — від гри до онлайн-магазину</li>
           <li><Link to="/about-me">Про мене:</Link> хто я, які навички маю, мій підхід до роботи</li>
-          <li><Link to="/contacts">Контакти:</Link> де мене знайти, якщо хочете співпрацювати або просто поспілкуватися</li>
+          <li><Link to="/contact">Контакти:</Link> де мене знайти, якщо хочете співпрацювати або просто поспілкуватися</li>
         </ul>
       </div>
       <img src="img/person.svg" alt="person" className={s.home_page__picture} />
