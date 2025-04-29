@@ -1,6 +1,29 @@
+import { useLocation } from 'react-router-dom';
 import s from './AboutMe.module.scss';
+import { motion } from 'motion/react';
+import { images } from './../../data/Data';
 
 export const AboutMe = () => {
+  const location = useLocation();
+
+  const variantAnimation = {
+    visible: (i: number) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 1 + i * 0.1,
+        duration: 1,
+      }
+    }),
+    hidden: {
+      opacity: 0,
+      scale: 0,
+      transition: {
+        delay: 1
+      }
+    }
+  }
+
   return (
     <div className={s.about}>
       <div className={s.about__title}>
@@ -19,45 +42,18 @@ export const AboutMe = () => {
           <li>Інструменти: VS Code, Figma, Postman, Chrome DevTools</li>
         </ul>
         <div className={s.about__skills}>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/react.png" alt="react" className={s.about__skills_image_react} />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/typescript.svg" alt="typescript" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/javascript.svg" alt="javascript" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/html5.svg" alt="html5" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/css.svg" alt="css" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/sass.svg" alt="sass" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/redux.svg" alt="redux" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/reactrouter.svg" alt="react router" className={s.about__skills_image_reactrouter} />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/tailwindcss.svg" alt="tailwind css" className={s.about__skills_image_tailwindcss}/>
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/webpack.svg" alt="webpack" className={s.about__skills_image_webpack}/>
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/git.svg" alt="git" />
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/github.svg" alt="github" className={s.about__skills_image_github}/>
-          </div>
-          <div className={s.about__skills_image}>
-            <img src="img/languages/i18next.svg" alt="i18next"/>
-          </div>
+          {Object.entries(images).map(([name, link], i) => (
+            <motion.div
+              key={i}
+              className={s.about__skills_image}
+              variants={variantAnimation}
+              initial='hidden'
+              animate={location.pathname === '/about-me' ? 'visible' : 'hidden'}
+              custom={i}
+            >
+              <img src={link} alt={name} className={s[`about__skills_image_${name}`]} />
+            </motion.div>
+          ))}
         </div>
       </div>
 

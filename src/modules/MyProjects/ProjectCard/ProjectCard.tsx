@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import s from './ProjectCard.module.scss';
 import { Card } from '../../../types/card';
+import { motion } from 'motion/react';
+import { useLocation } from 'react-router-dom';
 
 export default function ProjectCard() {
   const [cards, setCards] = useState<Card[]>([]);
+  const location = useLocation();
 
   useEffect(() => {
     fetch('./api/projects.json')
@@ -21,11 +24,36 @@ export default function ProjectCard() {
       })
   }, []);
 
+  const variantAnimation = {
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1 + i * 0.2,
+        duration: 1,
+      }
+    }),
+    hidden: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        delay: 1,
+      }
+     }
+  }
+
   return (
     <>
       {
-        cards.map(card => (
-          <div className={s.card}>
+        cards.map((card, i) => (
+          <motion.div
+            key={card.name}
+            className={s.card}
+            variants={variantAnimation}
+            initial='hidden'
+            animate={location.pathname === '/projects' ? 'visible' : 'hidden'}
+            custom={i}
+          >
             <a href={card.link} target='blank'>
               <div className={s.card__img}>
                 <img src={card.img} alt={card.name} />
@@ -33,7 +61,7 @@ export default function ProjectCard() {
             </a>
             <div className={s.card__name}>{card.name}</div>
             <div className={s.card__description}>{card.description}</div>
-          </div>
+          </motion.div>
         ))
       }
     </>

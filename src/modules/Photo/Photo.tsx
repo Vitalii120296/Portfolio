@@ -5,7 +5,7 @@ export const Photo = () => {
   return (
     <div className={s.photo__wrapper}>
       <div className={(s.photo)}>
-        <Link to={'/'}>
+        <Link to={'/about-me'}>
           <img src="img/photo/photo.png" alt="photo" />
         </Link>
       </div>

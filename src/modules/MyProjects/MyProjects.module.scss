@@ -1,18 +1,18 @@
 @use './../../styles/main' as *;
 
 .projects {
-  @extend %page-style;
-
-  &__title {
-    @extend %page-style-title;
-  } 
-
   --column-size: 212px;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--column-size), 1fr));
   gap: 30px 16px;
 
+  @extend %page-style;
+  
+  &__title {
+    @extend %page-style-title;
+  } 
+  
   @include on-tablet {
   --column-size: 237px;
   }
