@@ -38,6 +38,8 @@
   &__menu {
     display: flex;
     flex-direction: row;
+    column-gap: 15px;
+    row-gap: 15px;
     width: 100%;
     height: auto;
     padding: 0 15px;
@@ -50,7 +52,7 @@
 
     }
 
-    &_languages {
+    &_item {
       background-color: $background;
       box-shadow: 0 0 10px $shadow;
       display: flex;
@@ -60,10 +62,10 @@
       border-radius: 1rem;
       box-sizing: border-box;
       height: 30px;
-      width: 120px;
       transition: height 0.3s ease-in-out;
       cursor: pointer;
       text-wrap: nowrap;
+      width: 100%;
 
       &:hover {
         height: 100px;
@@ -99,6 +101,11 @@
           border-radius: 1rem;
           box-sizing: border-box;
           background-color: $shadow;
+
+          &.isActive {
+            background-color: $shadow-2;
+            color: $background;
+          }
         }
       }
     }

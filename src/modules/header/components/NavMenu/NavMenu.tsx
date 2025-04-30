@@ -9,6 +9,7 @@ import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import { Logo } from '../../../../shared/Logo';
 import { useTranslation } from 'react-i18next';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 
@@ -58,7 +59,7 @@ const getLinkClass = ({isActive}: {isActive: boolean}) => classNames(s.nav__link
         })}
         onClick={toggleBurgerMenu}
       >
-        <img src="img/icons/burgerMenu.png" alt="menu" />
+        <MenuIcon fontSize='medium' className={s.nav__icons}/>
       </div>
     </div>
   );

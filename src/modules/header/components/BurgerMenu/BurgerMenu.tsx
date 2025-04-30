@@ -7,6 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'react-i18next';
 
 export const BurgerMenu = () => {
@@ -19,7 +20,7 @@ export const BurgerMenu = () => {
     })}>
       <nav className={s.nav}>
         <div className={s.nav__close} onClick={() => setBurgerMenuActivate(prev => !prev)}>
-          <img src="img/icons/close.png" alt="close menu" />
+          <CloseIcon />
         </div>
         <ul className={s.nav__list}>
           <li className={s.nav__item}>
