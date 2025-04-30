@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Welcome to my portfolio!",
+    "intro": "My name is Vitalii, and I am a Frontend developer who creates modern, intuitive, and aesthetic interfaces.",
+    "description": "I combine technical knowledge with creative vision to develop web applications that not only look good but also function quickly and efficiently.",
+    "focus": "My focus is on developing responsive SPA (single-page applications), API integration, theme support (light/dark), custom UI components, and multilingual support (i18n). In my projects, I actively use React, TypeScript, SCSS, Git, and other modern technologies.",
+    "website_description": "This website is more than just an online business card. It's a demonstration of my skills, attention to detail, and approach to user experience. Every section, every animation, every project reflects my style as a developer.",
+    "what_you_will_find": "What you'll find on this website:",
+    "projects": "My projects: examples of real-world tasks I've solved — from a game to an online store.",
+    "about_me": "About Me: who I am, what skills I have, and my approach to work.",
+    "contacts": "Contacts: where to find me if you'd like to collaborate or just have a chat.",
+    "thank_you": "Thank you for stopping by!",
+    "click_menu": "Click on any menu item above to learn more."
+  }
+}

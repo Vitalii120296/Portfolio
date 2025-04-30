@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Інтернет-магазин: 'Nice Gadgets'",
+    "img": "img/projects/niceGadgets.png",
+    "description": "Інтернет-магазин гаджетів із продуманою каталогізацією, фільтрацією товарів та сучасним UI-дизайном. Макет реалізований згідно з принципами UX для e-commerce.",
+    "link": "https://vitalii120296.github.io/react_phone-catalog/"
+  },
+  {
+    "name": "Лендінг: 'Nothing'",
+    "img": "img/projects/nothing.png",
+    "description": "Лендінг для бренду Nothing — акцент на мінімалізмі та стильній візуальній подачі. Адаптивний дизайн і ефективне використання сучасних CSS-технік.",
+    "link": "https://vitalii120296.github.io/layout_landing-page/"
+  },
+  {
+    "name": "Гра 2048",
+    "img": "img/projects/2048.png",
+    "description": "Реалізація популярної гри 2048 на чистому JavaScript. Включає логіку злиття плиток, умови перемоги/поразки, адаптивний та зручний інтерфейс.",
+    "link": "https://vitalii120296.github.io/js_2048_game/"
+  },
+  {
+    "name": "Лендінг: 'Dia'",
+    "img": "img/projects/dia.png",
+    "description": "Односторінковий сайт для агенції стратегічного консалтингу. Охайний дизайн, адаптивна верстка та сучасний підтримуваний код.",
+    "link": "https://vitalii120296.github.io/layout_dia/"
+  }
+]

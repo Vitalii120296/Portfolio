@@ -1,0 +1,10 @@
+{
+  "contact": {
+    "title": "Connect with me:",
+    "name": "Name:",
+    "email": "Email:",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending..."
+  }
+}
