@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
 import s from './HomePage.module.scss';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export const HomePage = () => {
+  const { t } = useTranslation('HomePage');  // Use the translation namespace
+
   return (
     <div className={s.home_page}>
-      <h1 className={s.home_page__title}>Вітаю на моєму портфоліо!</h1>
-      <h2>
-        Мене звати Віталій, я — Frontend-розробник, який створює сучасні, інтуїтивні та естетичні інтерфейси.
-      </h2>
+      <h1 className={s.home_page__title}>{t('home.title')}</h1>  {/* Translated title */}
+      <h2>{t('home.intro')}</h2>  {/* Translated intro */}
+
       <motion.p
         initial={{
           opacity: 0,
           y: -20,
-
         }}
         animate={{
           opacity: 1,
@@ -24,13 +25,13 @@ export const HomePage = () => {
           }
         }}
       >
-        Я поєдную технічні знання з креативним баченням, щоб розробляти веб-додатки, які не тільки виглядають добре, а й працюють швидко та зручно.
+        {t('home.description')}
       </motion.p>
+
       <motion.p
         initial={{
           opacity: 0,
           y: -20,
-
         }}
         animate={{
           opacity: 1,
@@ -41,13 +42,13 @@ export const HomePage = () => {
           }
         }}
       >
-        Мій фокус — розробка адаптивних SPA (single-page applications), інтеграція з API, підтримка тем (світла/темна), кастомні UI-компоненти та підтримка мультимовності (i18n). У своїх проєктах я активно використовую React, TypeScript, SCSS, Git та інші сучасні технології.
+        {t('home.focus')}
       </motion.p>
+
       <motion.p
         initial={{
           opacity: 0,
           y: -20,
-
         }}
         animate={{
           opacity: 1,
@@ -58,14 +59,14 @@ export const HomePage = () => {
           }
         }}
       >
-        Цей сайт — не просто онлайн-візитка. Це демонстрація моїх навичок, уваги до деталей, а також підхід до користувацького досвіду. Кожен розділ, кожна анімація, кожен проєкт — це відображення мого стилю як розробника.<br />
+        {t('home.website_description')}
       </motion.p>
+
       <motion.div
         className={s.home_page__block}
         initial={{
           opacity: 0,
           y: -20,
-
         }}
         animate={{
           opacity: 1,
@@ -76,29 +77,31 @@ export const HomePage = () => {
           }
         }}
       >
-        <h3>Що ви знайдете на цьому сайті:</h3>
+        <h3>{t('home.what_you_will_find')}</h3>
         <ul>
-          <li><Link to="/projects">Мої проєкти:</Link> приклади реальних задач, які я вирішував — від гри до онлайн-магазину</li>
-          <li><Link to="/about-me">Про мене:</Link> хто я, які навички маю, мій підхід до роботи</li>
-          <li><Link to="/contact">Контакти:</Link> де мене знайти, якщо хочете співпрацювати або просто поспілкуватися</li>
+          <li><Link to="/projects">{t('home.projects')}</Link></li> 
+          <li><Link to="/about-me">{t('home.about_me')}</Link></li>
+          <li><Link to="/contact">{t('home.contacts')}</Link></li> 
         </ul>
       </motion.div>
+
       <motion.img
         src="img/person.svg"
         alt="person"
         className={s.home_page__picture}
-        initial={{opacity: 0}}
+        initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: {
-            duration:1,
+            duration: 1,
             delay: 2.5
           }
         }}
       />
+
       <p>
-        Дякую, що завітали!<br />
-        Натисніть на будь-який пункт меню зверху, щоб дізнатися більше.
+        {t('home.thank_you')}<br />
+        {t('home.click_menu')}
       </p>
     </div>
   );

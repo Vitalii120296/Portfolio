@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Online store: 'Nice Gadgets'",
+    "img": "img/projects/niceGadgets.png",
+    "description": "An online gadget store with thoughtful cataloging, product filtering, and modern UI design. The layout is implemented following e-commerce UX principles.",
+    "link": "https://vitalii120296.github.io/react_phone-catalog/"
+  },
+  {
+    "name": "Landing page: 'Nothing'",
+    "img": "img/projects/nothing.png",
+    "description": "A landing page for the Nothing brand — with a focus on minimalism and stylish visual presentation. Responsive design and effective use of modern CSS techniques.",
+    "link": "https://vitalii120296.github.io/layout_landing-page/"
+  },
+  {
+    "name": "2048 game",
+    "img": "img/projects/2048.png",
+    "description": "Implementation of the popular 2048 game using pure JavaScript. Includes tile merging logic, win/loss states, and a responsive and user-friendly interface.",
+    "link": "https://vitalii120296.github.io/js_2048_game/"
+  },
+  {
+    "name": "Landing page: 'Dia'",
+    "img": "img/projects/dia.png",
+    "description": "A single-page website for a strategic consulting agency. Clean design, responsive layout, and modern, maintainable code.",
+    "link": "https://vitalii120296.github.io/layout_dia/"
+  }
+]

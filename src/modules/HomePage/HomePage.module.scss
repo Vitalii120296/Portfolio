@@ -1,10 +1,6 @@
 @use './../../styles/main' as *;
 
 .home_page {
-  
-  & a {
-    text-decoration: underline;
-  }
 
   @extend %page-style;
   row-gap: 12px;

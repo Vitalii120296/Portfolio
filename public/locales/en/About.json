@@ -1,0 +1,32 @@
+{
+  "about": {
+    "title": "About me",
+    "goal": "My goal is not just to write code, but to build products that are user-friendly, fast, and aesthetically pleasing.",
+    "skills_title": "My skills:",
+    "skills_list": {
+      "languages": "Languages: JavaScript, TypeScript, HTML5, CSS3, SCSS",
+      "frameworks": "Frameworks / Libraries: React, Redux, React Router, TailwindCSS",
+      "other_technologies": "Other technologies: Webpack, Git, GitHub, REST API, i18next",
+      "tools": "Tools: VS Code, Figma, Postman, Chrome DevTools"
+    },
+    "approach_title": "Approach to work:",
+    "approach_list": {
+      "clean_code": "I write clean and structured code using a component-based architecture.",
+      "responsive_layout": "I implement responsive design, considering cross-browser compatibility.",
+      "ui_ux": "I apply UI/UX principles for user convenience.",
+      "i18n_themes": "I work with internationalization (i18n) and themes using CSS variables and SCSS."
+    },
+    "proud_title": "What I am proud of:",
+    "proud_list": {
+      "shop_project": "I created a fully responsive online store with multilingual support and animations.",
+      "2048_game": "I developed the '2048' game using native JavaScript and logic for combination handling.",
+      "portfolio_project": "I built my own portfolio with custom design, dark theme, and flip animations between sections."
+    },
+    "future_goals_title": "Goals for the future:",
+    "future_goals_list": {
+      "react_native_next_js": "Deepen my knowledge in React Native and Next.js",
+      "testing": "Learn testing (Jest / Cypress)",
+      "open_source": "Participate in open-source projects or volunteer development"
+    }
+  }
+}

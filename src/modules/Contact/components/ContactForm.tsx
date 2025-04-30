@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import s from './ContactForm.module.scss';
 import React, { useState } from 'react'
 
@@ -5,6 +6,7 @@ const TELEGRAM_BOT_TOKEN = '7749578552:AAGwc9bqAOsFrQ9NdMpyJf3EZ5M0KmdNG30';
 const TELEGRAM_CHAT_ID = '1125974852';
 
 export default function ContactForm() {
+  const { t } = useTranslation('Contact');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -56,7 +58,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className={s.contact__form}>
-          <label htmlFor="name" className={s.contact__label}>Ім‘я: 🧑</label>
+          <label htmlFor="name" className={s.contact__label}>{t('contact.name')} 🧑</label>
           <input
             type="text"
             id="name"
@@ -66,7 +68,7 @@ export default function ContactForm() {
             required
           />
 
-          <label htmlFor="email" className={s.contact__label}>Емейл: 📧</label>
+          <label htmlFor="email" className={s.contact__label}>{t('contact.email')} 📧</label>
           <input
             type="email"
             id="email"
@@ -76,7 +78,7 @@ export default function ContactForm() {
             required
           />
 
-          <label htmlFor="text" className={s.contact__label}>Текст: 📝</label>
+          <label htmlFor="text" className={s.contact__label}>{t('contact.message')} 📝</label>
           <textarea
             id="text"
             className={s.contact__textarea}
@@ -87,7 +89,7 @@ export default function ContactForm() {
           />
 
           <button type="submit" className={s.contact__submit} disabled={isSending}>
-            {isSending ? 'Відправка...' : 'Відправити'}
+            {isSending ? t('contact.sending') : t('contact.send')}
           </button>
 
           {error && <div className={s.contact__error}>{error}</div>}

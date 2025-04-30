@@ -2,9 +2,11 @@ import { useLocation } from 'react-router-dom';
 import s from './AboutMe.module.scss';
 import { motion } from 'motion/react';
 import { images } from './../../data/Data';
+import { useTranslation } from 'react-i18next';
 
 export const AboutMe = () => {
   const location = useLocation();
+  const { t } = useTranslation('About');
 
   const variantAnimation = {
     visible: (i: number) => ({
@@ -27,19 +29,19 @@ export const AboutMe = () => {
   return (
     <div className={s.about}>
       <div className={s.about__title}>
-        <h1>Про мене</h1>
+        <h1>{t('about.title')}</h1>
       </div>
       <h2>
-        Моя ціль — не просто писати код, а будувати продукти, якими зручно користуватися, які швидко працюють і виглядають естетично.
+      {t('about.goal')}
       </h2>
 
       <div className={s.about__block}>
-        <p className={s.about__list_title}>Мої скіли:</p>
+        <p className={s.about__list_title}>{t('about.skills_title')}</p>
         <ul>
-          <li>Мови: JavaScript, TypeScript, HTML5, CSS3, SCSS</li>
-          <li>Фреймворки / Бібліотеки: React, Redux, React Router, TailwindCSS</li>
-          <li>Інші технології: Webpack, Git, GitHub, REST API, i18next</li>
-          <li>Інструменти: VS Code, Figma, Postman, Chrome DevTools</li>
+          <li>{t('about.skills_list.languages')}</li>
+          <li>{t('about.skills_list.frameworks')}</li>
+          <li>{t('about.skills_list.other_technologies')}</li>
+          <li>{t('about.skills_list.tools')}</li>
         </ul>
         <div className={s.about__skills}>
           {Object.entries(images).map(([name, link], i) => (
@@ -58,30 +60,30 @@ export const AboutMe = () => {
       </div>
 
       <div className={s.about__block}>
-        <p className={s.about__list_title}>Підхід до роботи:</p>
+        <p className={s.about__list_title}>{t('about.approach_title')}</p>
         <ul>
-          <li>Пишу чистий і структурований код, використовуючи компонентну архітектуру.</li>
-          <li>Впроваджую адаптивну верстку, з урахуванням кросбраузерності.</li>
-          <li>Застосовую принципи UI/UX для зручності користувачів.</li>
-          <li>Працюю з інтернаціоналізацією (i18n), а також темами з використанням CSS-змінних і SCSS.</li>
+          <li>{t('about.approach_list.clean_code')}.</li>
+          <li>{t('about.approach_list.responsive_layout')}.</li>
+          <li>{t('about.approach_list.ui_ux')}.</li>
+          <li>{t('about.approach_list.i18n_themes')}.</li>
         </ul>
       </div>
 
       <div className={s.about__block}>
-        <p className={s.about__list_title}>Чим я пишаюсь:</p>
+        <p className={s.about__list_title}>{t('about.proud_title')}</p>
         <ul>
-          <li>Створив повністю адаптивний інтернет-магазин з мультимовною підтримкою та анімаціями.</li>
-          <li>Розробив гру “2048” з використанням нативного JavaScript та логікою обробки комбінацій.</li>
-          <li>Побудував власне портфоліо з кастомним дизайном, темною темою та flip-анімаціями між розділами.</li>
+          <li>{t('about.proud_list.shop_project')}</li>
+          <li>{t('about.proud_list.2048_game')}</li>
+          <li>{t('about.proud_list.portfolio_project')}</li>
         </ul>
       </div>
 
       <div className={s.about__block}>
-        <p className={s.about__list_title}>Цілі на майбутнє:</p>
+        <p className={s.about__list_title}>{t('about.future_goals_title')}</p>
         <ul>
-          <li>Поглибити знання у сфері React Native та Next.js</li>
-          <li>Освоїти тестування (Jest / Cypress)</li>
-          <li>Взяти участь у відкритих проєктах або волонтерській розробці</li>
+          <li>{t('about.future_goals_list.react_native_next_js')}</li>
+          <li>{t('about.future_goals_list.testing')}</li>
+          <li>{t('about.future_goals_list.open_source')}</li>
         </ul>
       </div>
     </div>

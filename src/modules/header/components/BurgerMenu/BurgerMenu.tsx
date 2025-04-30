@@ -7,8 +7,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+import { useTranslation } from 'react-i18next';
 
 export const BurgerMenu = () => {
+  const { t } = useTranslation('Header'); 
   const { burgerMenuActivate, setBurgerMenuActivate } = useContext(BurgerContext);
 
   return (
@@ -27,7 +29,7 @@ export const BurgerMenu = () => {
               onClick={() => setBurgerMenuActivate(false)}
             >
               <HomeIcon fontSize='medium' className={s.nav__icons} />
-              Home
+              {t('Home')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
@@ -37,7 +39,7 @@ export const BurgerMenu = () => {
               onClick={() => setBurgerMenuActivate(false)}
             >
               <WorkIcon className={s.nav__icons} fontSize='small' />
-              My projects
+              {t('Projects')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
@@ -47,7 +49,7 @@ export const BurgerMenu = () => {
               onClick={() => setBurgerMenuActivate(false)}
             >
               <InfoOutlineIcon className={s.nav__icons} fontSize='small' />
-              About me
+              {t('About me')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
@@ -57,7 +59,7 @@ export const BurgerMenu = () => {
               onClick={() => setBurgerMenuActivate(false)}
             >
               <PermContactCalendarIcon className={s.nav__icons} fontSize='small' />
-              Contact
+              {t('Contact')}
             </NavLink>
           </li>
         </ul>

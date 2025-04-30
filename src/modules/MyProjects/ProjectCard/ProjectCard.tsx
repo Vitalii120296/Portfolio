@@ -3,13 +3,15 @@ import s from './ProjectCard.module.scss';
 import { Card } from '../../../types/card';
 import { motion } from 'motion/react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectCard() {
   const [cards, setCards] = useState<Card[]>([]);
   const location = useLocation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
-    fetch('./api/projects.json')
+    fetch(i18n.language === 'en' ? './api/projects_en.json' : './api/projects_uk.json')
       .then(res => {
         if (res.ok) {
           return res.json();
@@ -22,7 +24,7 @@ export default function ProjectCard() {
       .catch(error => {
         throw error;
       })
-  }, []);
+  }, [i18n.language]);
 
   const variantAnimation = {
     visible: (i: number) => ({

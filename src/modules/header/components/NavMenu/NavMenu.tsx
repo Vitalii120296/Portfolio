@@ -8,12 +8,14 @@ import WorkIcon from '@mui/icons-material/Work';
 import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import { Logo } from '../../../../shared/Logo';
+import { useTranslation } from 'react-i18next';
 
 
 
 export const NavMenu = () => {
   const { burgerMenuActivate, setBurgerMenuActivate } = useContext(BurgerContext);
-  const toggleBurgerMenu = () => setBurgerMenuActivate(prev => !prev)
+  const toggleBurgerMenu = () => setBurgerMenuActivate(prev => !prev);
+  const { t } = useTranslation('Header');
 
 const getLinkClass = ({isActive}: {isActive: boolean}) => classNames(s.nav__link, {
     [s.isActive]: isActive,
@@ -27,25 +29,25 @@ const getLinkClass = ({isActive}: {isActive: boolean}) => classNames(s.nav__link
           <li className={s.nav__item}>
             <NavLink to="/" className={getLinkClass}>
               <HomeIcon fontSize='medium' className={s.nav__icons} />
-              Home
+              {t('Home')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
             <NavLink to="projects" className={getLinkClass}>
               <WorkIcon className={s.nav__icons} fontSize='small' />
-              Projects
+              {t('Projects')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
             <NavLink to="about-me" className={getLinkClass}>
               <InfoOutlineIcon className={s.nav__icons} fontSize='small' />
-              About me
+              {t('About me')}
             </NavLink>
           </li>
           <li className={s.nav__item}>
             <NavLink to="contact" className={getLinkClass}>
               <PermContactCalendarIcon className={s.nav__icons} fontSize='small' />
-              Contact
+              {t('Contact')}
             </NavLink>
           </li>
         </ul>

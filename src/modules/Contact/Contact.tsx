@@ -1,12 +1,14 @@
 import ContactForm from './components/ContactForm';
 import s from './Contact.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+  const { t } = useTranslation('Contact');
 
   return (
     <div className={s.contact}>
       <div className={s.contact__title}>
-        <h1>Connect with me:</h1>
+        <h1>{t('contact.title')}</h1>
       </div>
       <div className={s.contact__wrapper}>
         <div className={s.contacts}>
