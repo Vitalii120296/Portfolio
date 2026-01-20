@@ -4,10 +4,17 @@
     "goal": "My goal is not just to write code, but to build products that are user-friendly, fast, and aesthetically pleasing.",
     "skills_title": "My skills:",
     "skills_list": {
-      "languages": "Languages: JavaScript, TypeScript, HTML5, CSS3, SCSS",
-      "frameworks": "Frameworks / Libraries: React, Redux, React Router, TailwindCSS",
-      "other_technologies": "Other technologies: Webpack, Git, GitHub, REST API, i18next",
-      "tools": "Tools: VS Code, Figma, Postman, Chrome DevTools"
+      "languages": "Languages: TypeScript, JavaScript, HTML5, CSS3, SCSS",
+      "frameworks": "Frameworks / Libraries: React, Redux Toolkit, React Router, TailwindCSS, Material UI, Framer Motion",
+      "backend": "Backend: Node.js, Express",
+      "apis": "APIs & Networking: Fetch API, REST API, WebSockets",
+      "databases": "Databases & ORM: SQL, PostgreSQL, Sequelize, Prisma",
+      "tooling": "Build & Tooling: Git, GitHub, Webpack, Vite, Babel, Docker, ESLint, Prettier",
+      "testing": "Testing: Unit Testing (Jest), End-to-End Testing (Cypress)",
+      "other_technologies": "Other: i18next, BEM methodology",
+      "concepts": "Concepts: Basic OOP, SDLC, Agile (Scrum, Kanban), Waterfall",
+      "tools": "Tools: VS Code, Figma, Postman, Chrome DevTools",
+      "additional": "Additional: Basic C++ knowledge"
     },
     "approach_title": "Approach to work:",
     "approach_list": {
@@ -20,11 +27,13 @@
     "proud_list": {
       "shop_project": "I created a fully responsive online store with multilingual support and animations.",
       "2048_game": "I developed the '2048' game using native JavaScript and logic for combination handling.",
-      "portfolio_project": "I built my own portfolio with custom design, dark theme, and flip animations between sections."
+      "portfolio_project": "I built my own portfolio with custom design, dark theme, and flip animations between sections.",
+      "commercial_beauty_project": "Delivered a commercial beauty salon website for a real client based in the United States, with a strong focus on UX, responsiveness, and business requirements.",
+      "commercial_dental_project": "Developed a website for a teeth whitening and dental cleaning clinic as a paid client project, fully delivered to a production-ready state."
     },
     "future_goals_title": "Goals for the future:",
     "future_goals_list": {
-      "react_native_next_js": "Deepen my knowledge in React Native and Next.js",
+      "react_native_next_js": "Deepen my knowledge in React Native",
       "testing": "Learn testing (Jest / Cypress)",
       "open_source": "Participate in open-source projects or volunteer development"
     }

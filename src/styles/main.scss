@@ -4,3 +4,7 @@
 @forward './utils/mixins';
 @forward './utils/extends';
 @forward './utils/animations';
+
+body {
+  transition: background-color 0.3s ease-in-out;
+}

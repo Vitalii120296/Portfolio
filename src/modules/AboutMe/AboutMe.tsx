@@ -7,6 +7,9 @@ import { useTranslation } from 'react-i18next';
 export const AboutMe = () => {
   const location = useLocation();
   const { t } = useTranslation('About');
+  const skills = t('about.skills_list', { returnObjects: true }) as Record<string, string>;
+  const proudList = t('about.proud_list', { returnObjects: true }) as Record<string, string>;
+
 
   const variantAnimation = {
     visible: (i: number) => ({
@@ -32,16 +35,15 @@ export const AboutMe = () => {
         <h1>{t('about.title')}</h1>
       </div>
       <h2>
-      {t('about.goal')}
+        {t('about.goal')}
       </h2>
 
       <div className={s.about__block}>
         <p className={s.about__list_title}>{t('about.skills_title')}</p>
         <ul>
-          <li>{t('about.skills_list.languages')}</li>
-          <li>{t('about.skills_list.frameworks')}</li>
-          <li>{t('about.skills_list.other_technologies')}</li>
-          <li>{t('about.skills_list.tools')}</li>
+          {Object.entries(skills).map(([key, value]) => (
+            <li key={key}>{value}</li>
+          ))}
         </ul>
         <div className={s.about__skills}>
           {Object.entries(images).map(([name, link], i) => (
@@ -72,9 +74,9 @@ export const AboutMe = () => {
       <div className={s.about__block}>
         <p className={s.about__list_title}>{t('about.proud_title')}</p>
         <ul>
-          <li>{t('about.proud_list.shop_project')}</li>
-          <li>{t('about.proud_list.2048_game')}</li>
-          <li>{t('about.proud_list.portfolio_project')}</li>
+          {Object.entries(proudList).map(([key, value]) => (
+            <li key={key}>{value}</li>
+          ))}
         </ul>
       </div>
 

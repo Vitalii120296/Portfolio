@@ -41,7 +41,7 @@ export default function ProjectCard() {
       transition: {
         delay: 1,
       }
-     }
+    }
   }
 
   return (
@@ -56,7 +56,7 @@ export default function ProjectCard() {
             animate={location.pathname === '/projects' ? 'visible' : 'hidden'}
             custom={i}
           >
-            <a href={card.link} target='blank'>
+            <a href={card.link} target='_blank'>
               <div className={s.card__img}>
                 <img src={card.img} alt={card.name} />
               </div>

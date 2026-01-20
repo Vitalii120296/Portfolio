@@ -11,6 +11,8 @@
   border-radius: inherit;
   font-size: 14px;
   transition: scale 0.3s ease-in-out;
+  z-index: 1;
+  background-color: $background;
 
   &:hover {
     scale: 1.04;
@@ -21,9 +23,12 @@
     justify-content: center;
     border-radius: 1rem;
     overflow: hidden;
+    height: 200px;
 
     & img {
+      height: 100%;
       width: 100%;
+      object-fit: cover;
     }
   }
 
