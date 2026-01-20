@@ -1,5 +1,17 @@
 [
   {
+    "name": "Snowy Smiles (Commercial Project)",
+    "img": "img/projects/Snowy_smiles.png",
+    "description": "A website for a teeth whitening and dental cleaning clinic, developed as a paid client project. The goal was to create a trustworthy and modern online presence tailored to the healthcare and beauty industry.",
+    "link": "https://snowysmiles.org/"
+  },
+  {
+    "name": "Elegant Beauty Studio (Commercial Project)",
+    "img": "img/projects/Elegant_beauty_studio.png",
+    "description": "A beauty salon website developed for a real client based in the United States, offering a wide range of beauty services. The project was created on a contractual basis and is actively used by the client to present services online.",
+    "link": "https://elegantbeautystudio.us/"
+  },
+  {
     "name": "Online store: 'Nice Gadgets'",
     "img": "img/projects/niceGadgets.png",
     "description": "An online gadget store with thoughtful cataloging, product filtering, and modern UI design. The layout is implemented following e-commerce UX principles.",

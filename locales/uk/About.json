@@ -2,12 +2,19 @@
   "about": {
     "title": "Про мене",
     "goal": "Моя ціль — не просто писати код, а будувати продукти, якими зручно користуватися, які швидко працюють і виглядають естетично.",
-    "skills_title": "Мої скіли:",
+    "skills_title": "Мої навички:",
     "skills_list": {
-      "languages": "Мови: JavaScript, TypeScript, HTML5, CSS3, SCSS",
-      "frameworks": "Фреймворки / Бібліотеки: React, Redux, React Router, TailwindCSS",
-      "other_technologies": "Інші технології: Webpack, Git, GitHub, REST API, i18next",
-      "tools": "Інструменти: VS Code, Figma, Postman, Chrome DevTools"
+      "languages": "Мови: TypeScript, JavaScript, HTML5, CSS3, SCSS",
+      "frameworks": "Фреймворки та бібліотеки: React, Redux Toolkit, React Router, TailwindCSS, Material UI, Framer Motion",
+      "backend": "Бекенд: Node.js, Express",
+      "apis": "API та мережна взаємодія: Fetch API, REST API, WebSockets",
+      "databases": "Бази даних та ORM: SQL, PostgreSQL, Sequelize, Prisma",
+      "tooling": "Збірка та інструменти: Git, GitHub, Webpack, Vite, Babel, Docker, ESLint, Prettier",
+      "testing": "Тестування: модульне тестування (Jest), end-to-end тестування (Cypress)",
+      "other_technologies": "Інше: i18next, методологія BEM",
+      "concepts": "Концепції: базове ООП, SDLC, Agile (Scrum, Kanban), Waterfall",
+      "tools": "Інструменти: VS Code, Figma, Postman, Chrome DevTools",
+      "additional": "Додатково: базові знання C++"
     },
     "approach_title": "Підхід до роботи:",
     "approach_list": {
@@ -20,11 +27,13 @@
     "proud_list": {
       "shop_project": "Створив повністю адаптивний інтернет-магазин з мультимовною підтримкою та анімаціями.",
       "2048_game": "Розробив гру “2048” з використанням нативного JavaScript та логікою обробки комбінацій.",
-      "portfolio_project": "Побудував власне портфоліо з кастомним дизайном, темною темою та flip-анімаціями між розділами."
+      "portfolio_project": "Побудував власне портфоліо з кастомним дизайном, темною темою та flip-анімаціями між розділами.",
+      "commercial_beauty_project": "Реалізував комерційний сайт салону краси для реального клієнта з США, з фокусом на UX, адаптивність та бізнес-вимоги.",
+      "commercial_dental_project": "Розробив сайт для клініки відбілювання та чистки зубів як платний клієнтський проєкт, доведений до продакшн-стану."
     },
     "future_goals_title": "Цілі на майбутнє:",
     "future_goals_list": {
-      "react_native_next_js": "Поглибити знання у сфері React Native та Next.js",
+      "react_native_next_js": "Поглибити знання у сфері React Native",
       "testing": "Освоїти тестування (Jest / Cypress)",
       "open_source": "Взяти участь у відкритих проєктах або волонтерській розробці"
     }
