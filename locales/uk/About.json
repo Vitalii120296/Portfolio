@@ -34,7 +34,6 @@
     "future_goals_title": "Цілі на майбутнє:",
     "future_goals_list": {
       "react_native_next_js": "Поглибити знання у сфері React Native",
-      "testing": "Освоїти тестування (Jest / Cypress)",
       "open_source": "Взяти участь у відкритих проєктах або волонтерській розробці"
     }
   }
